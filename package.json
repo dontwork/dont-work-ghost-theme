@@ -1,0 +1,71 @@
+{
+    "name": "dont-work-ghost-theme",
+    "description": "The ghost theme for dontwork.io",
+    "demo": "https://dontwork.io",
+    "version": "0.0.1",
+    "engines": {
+        "ghost": ">=0.9.0 <1.0.0"
+    },
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.jpg",
+        "mobile": "assets/screenshot-mobile.jpg"
+    },
+    "author": {
+        "name": "Oliver Hunt",
+        "email": "oliver@oliverhunt.net",
+        "url": "https://dontwork.io"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Personal Blogs"
+        ]
+    },
+    "keywords": [
+        "ghost",
+        "theme"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dontwork/dont-work-ghost-theme.git"
+    },
+    "bugs": "https://github.com/dontwork/dont-work-ghost-theme/issues",
+    "contributors": "https://github.com/dontwork/dont-work-ghost-theme/graphs/contributors",
+    "scripts": {
+        "test": "mocha test -u bdd -R spec",
+        "build-js": "browserify src/js/app.js -o assets/js/index.js",
+        "build-sass": "node-sass src/scss/app.scss assets/css/screen.css",
+        "build-min-js": "browserify src/js/app.js | uglifyjs -o assets/js/index.min.js",
+        "build-min-sass": "node-sass src/scss/app.scss | cleancss -o assets/css/screen.min.css",
+        "watch-js": "nodemon -e js -w src/js -x npm run build-js",
+        "watch-sass": "nodemon -e scss -w src/scss -x npm run build-sass",
+        "build": "npm run build-js & npm run build-sass",
+        "watch": "npm run watch-js & npm run watch-sass"
+      },
+    "browserify": {
+        "transform": [
+          [
+            "babelify",
+            {
+              "presets": ["es2015", "stage-2"]
+            }
+          ]
+        ]
+    },
+    "devDependencies": {
+        "babel-preset-es2015": "^6.18.0",
+        "babel-preset-stage-2": "^6.18.0",
+        "browserify": "^13.1.1",
+        "node-sass": "^4.0.0",
+        "babelify": "^7.3.0",
+        "clean-css": "^3.4.21",
+        "mocha": "^3.2.0",
+        "nodemon": "^1.11.0",
+        "should": "^11.1.1",
+        "standard": "^8.6.0",
+        "uglifyjs": "^2.4.10"
+    },
+    "dependencies": {
+    }
+}
