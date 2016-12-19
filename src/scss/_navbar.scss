@@ -1,0 +1,62 @@
+.navbar {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: #F1D355;
+    border-bottom: 1px solid darken(#F1D355, 10);
+}
+
+.navbar-logo {
+    max-width: 100px;
+    max-height: 100px;
+    width: 50px;
+    @include breakpoint(break-1) {
+        width: 60px;
+    }
+
+    @include breakpoint(break-2) {
+        width: 70px;
+    }
+
+    @include breakpoint(break-3) {
+        width: 80px;
+    }
+
+    @include breakpoint(break-4) {
+        width: 100px;
+    }
+}
+
+.navbar-title {
+    font-family: "Gotham SSm A", "Gotham SSm B", "sans-serif";
+    font-weight: 700;
+    padding-top: 0;
+    color: #000;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+
+    li {
+        margin-left: 2rem;
+    }
+
+    li:first-child {
+        margin-left: 0;
+    }
+    a {
+        text-shadow: none;
+        background-image: none;
+        color: #000;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 3px;
+
+        &:hover {
+            border-bottom: 2px solid black;
+        }
+    }
+}

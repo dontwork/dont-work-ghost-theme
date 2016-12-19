@@ -1,2 +1,831 @@
+* {
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html, body {
+  height: 100%; }
+
+a img {
+  border: none; }
+
+blockquote {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+html {
+  font-size: 75%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+  @media screen and (min-width: 40em) {
+    html {
+      font-size: 87.5%; } }
+  @media screen and (min-width: 50em) {
+    html {
+      font-size: 93.75%; } }
+  @media screen and (min-width: 64em) {
+    html {
+      font-size: 106.25%; } }
+  @media screen and (min-width: 100em) {
+    html {
+      font-size: 118.75%; } }
+
+body {
+  font-size: 1.33333rem;
+  font-family: "Operator SSm A", "Operator SSm B", "mono";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem; }
+  @media screen and (min-width: 40em) {
+    body {
+      font-size: 1.21429rem; } }
+  @media screen and (min-width: 50em) {
+    body {
+      font-size: 1.2rem; } }
+  @media screen and (min-width: 64em) {
+    body {
+      font-size: 1.17647rem; } }
+  @media screen and (min-width: 100em) {
+    body {
+      font-size: 1.15789rem; } }
+
+a {
+  color: #0E58F5;
+  text-decoration: none;
+  transition: color .1s, background-color .1s; }
+  a:hover, a:active, a:focus {
+    color: #0B348B;
+    text-decoration: none; }
+
+p a, li a {
+  background-image: linear-gradient(to bottom, transparent 50%, #709cf9 50%);
+  background-position: 0 93%;
+  background-repeat: repeat-x;
+  background-size: 100% 0.15rem;
+  text-shadow: 0.1rem 0 #FCFCFC, 0.15rem 0 #FCFCFC, -0.1rem 0 #FCFCFC, -0.15rem 0 #FCFCFC; }
+  p a:hover, p a:active, p a:focus, li a:hover, li a:active, li a:focus {
+    background-image: linear-gradient(to bottom, transparent 50%, #1257ea 50%); }
+
+p {
+  line-height: 2rem;
+  margin-bottom: 1.43999rem;
+  padding-top: 0.56001rem;
+  font-feature-settings: 'kern', 'onum', 'liga'; }
+  @media screen and (min-width: 40em) {
+    p {
+      margin-bottom: 1.4007rem;
+      padding-top: 0.5993rem; } }
+  @media screen and (min-width: 50em) {
+    p {
+      margin-bottom: 1.39599rem;
+      padding-top: 0.60401rem; } }
+  @media screen and (min-width: 64em) {
+    p {
+      margin-bottom: 1.38823rem;
+      padding-top: 0.61177rem; } }
+  @media screen and (min-width: 100em) {
+    p {
+      margin-bottom: 1.3821rem;
+      padding-top: 0.6179rem; } }
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Gotham SSm A", "Gotham SSm B"; }
+  color: #2E2E2E;
+  font-family: "Gotham SSm A", "Gotham SSm B", "sans-serif";
+  font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+  font-style: normal;
+  font-weight: 700; }
+
+h1, .alpha {
+  line-height: 3rem;
+  font-size: 2.33333rem;
+  margin-bottom: 0.26999rem;
+  padding-top: 0.73001rem; }
+  @media screen and (min-width: 40em) {
+    h1, .alpha {
+      font-size: 2.14286rem;
+      margin-bottom: 0.20713rem;
+      padding-top: 0.79287rem; } }
+  @media screen and (min-width: 50em) {
+    h1, .alpha {
+      font-size: 2.13333rem;
+      margin-bottom: 0.20399rem;
+      padding-top: 0.79601rem; } }
+  @media screen and (min-width: 64em) {
+    h1, .alpha {
+      font-size: 2.35294rem;
+      margin-bottom: 0.27646rem;
+      padding-top: 0.72354rem; } }
+  @media screen and (min-width: 100em) {
+    h1, .alpha {
+      font-size: 2.63158rem;
+      margin-bottom: 0.36841rem;
+      padding-top: 0.63159rem; } }
+
+h2, .beta {
+  line-height: 3rem;
+  font-size: 2.08333rem;
+  margin-bottom: 0.18749rem;
+  padding-top: 0.81251rem; }
+  @media screen and (min-width: 40em) {
+    h2, .beta {
+      font-size: 1.9rem;
+      margin-bottom: 0.12699rem;
+      padding-top: 0.87301rem; } }
+  @media screen and (min-width: 50em) {
+    h2, .beta {
+      font-size: 1.87333rem;
+      margin-bottom: 0.11819rem;
+      padding-top: 0.88181rem; } }
+  @media screen and (min-width: 64em) {
+    h2, .beta {
+      font-size: 2.08824rem;
+      margin-bottom: 0.18911rem;
+      padding-top: 0.81089rem; } }
+  @media screen and (min-width: 100em) {
+    h2, .beta {
+      font-size: 2.31053rem;
+      margin-bottom: 0.26246rem;
+      padding-top: 0.73754rem; } }
+
+h3, .gamma {
+  line-height: 3rem;
+  font-size: 1.86667rem;
+  margin-bottom: 0.11599rem;
+  padding-top: 0.88401rem; }
+  @media screen and (min-width: 40em) {
+    h3, .gamma {
+      font-size: 1.71429rem;
+      margin-bottom: 0.0657rem;
+      padding-top: 0.9343rem; } }
+  @media screen and (min-width: 50em) {
+    h3, .gamma {
+      font-size: 1.70667rem;
+      margin-bottom: 0.06319rem;
+      padding-top: 0.93681rem; } }
+  @media screen and (min-width: 64em) {
+    h3, .gamma {
+      font-size: 1.76471rem;
+      margin-bottom: 0.08234rem;
+      padding-top: 0.91766rem; } }
+  @media screen and (min-width: 100em) {
+    h3, .gamma {
+      font-size: 1.85789rem;
+      margin-bottom: 0.1131rem;
+      padding-top: 0.8869rem; } }
+
+h4, .delta {
+  line-height: 2rem;
+  font-size: 1.66667rem;
+  margin-bottom: -0.45001rem;
+  padding-top: 0.45001rem; }
+  @media screen and (min-width: 40em) {
+    h4, .delta {
+      font-size: 1.52143rem;
+      margin-bottom: -0.49794rem;
+      padding-top: 0.49794rem; } }
+  @media screen and (min-width: 50em) {
+    h4, .delta {
+      font-size: 1.5rem;
+      margin-bottom: -0.50501rem;
+      padding-top: 0.50501rem; } }
+  @media screen and (min-width: 64em) {
+    h4, .delta {
+      font-size: 1.57059rem;
+      margin-bottom: -0.48172rem;
+      padding-top: 0.48172rem; } }
+  @media screen and (min-width: 100em) {
+    h4, .delta {
+      font-size: 1.63684rem;
+      margin-bottom: -0.45985rem;
+      padding-top: 0.45985rem; } }
+
+h5, .epsilon {
+  line-height: 2rem;
+  font-size: 1.49167rem;
+  margin-bottom: -0.50776rem;
+  padding-top: 0.50776rem; }
+  @media screen and (min-width: 40em) {
+    h5, .epsilon {
+      font-size: 1.37143rem;
+      margin-bottom: -0.54744rem;
+      padding-top: 0.54744rem; } }
+  @media screen and (min-width: 50em) {
+    h5, .epsilon {
+      font-size: 1.36667rem;
+      margin-bottom: -0.54901rem;
+      padding-top: 0.54901rem; } }
+  @media screen and (min-width: 64em) {
+    h5, .epsilon {
+      font-size: 1.32353rem;
+      margin-bottom: -0.56325rem;
+      padding-top: 0.56325rem; } }
+  @media screen and (min-width: 100em) {
+    h5, .epsilon {
+      font-size: 1.31579rem;
+      margin-bottom: -0.5658rem;
+      padding-top: 0.5658rem; } }
+
+h6, .zeta {
+  line-height: 2rem;
+  font-size: 1.33333rem;
+  margin-bottom: -0.56001rem;
+  padding-top: 0.56001rem; }
+  @media screen and (min-width: 40em) {
+    h6, .zeta {
+      font-size: 1.21429rem;
+      margin-bottom: -0.5993rem;
+      padding-top: 0.5993rem; } }
+  @media screen and (min-width: 50em) {
+    h6, .zeta {
+      font-size: 1.2rem;
+      margin-bottom: -0.60401rem;
+      padding-top: 0.60401rem; } }
+  @media screen and (min-width: 64em) {
+    h6, .zeta {
+      font-size: 1.17647rem;
+      margin-bottom: -0.61177rem;
+      padding-top: 0.61177rem; } }
+  @media screen and (min-width: 100em) {
+    h6, .zeta {
+      font-size: 1.15789rem;
+      margin-bottom: -0.6179rem;
+      padding-top: 0.6179rem; } }
+
+ul, ol {
+  line-height: 2rem;
+  margin-bottom: 1.43999rem;
+  padding-top: 0.56001rem; }
+  @media screen and (min-width: 40em) {
+    ul, ol {
+      margin-bottom: 1.4007rem;
+      padding-top: 0.5993rem; } }
+  @media screen and (min-width: 50em) {
+    ul, ol {
+      margin-bottom: 1.39599rem;
+      padding-top: 0.60401rem; } }
+  @media screen and (min-width: 64em) {
+    ul, ol {
+      margin-bottom: 1.38823rem;
+      padding-top: 0.61177rem; } }
+  @media screen and (min-width: 100em) {
+    ul, ol {
+      margin-bottom: 1.3821rem;
+      padding-top: 0.6179rem; } }
+  ul li, ol li {
+    font-feature-settings: 'kern', 'onum', 'liga';
+    margin-left: 2rem; }
+    @media screen and (min-width: 40em) {
+      ul li, ol li {
+        margin-left: 0; } }
+    ul li ol, ul li ul, ol li ol, ol li ul {
+      padding-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 2rem; }
+
+ol {
+  list-style-type: none; }
+  ol li {
+    counter-increment: top-level; }
+    ol li:before {
+      content: counter(top-level) ".";
+      font-feature-settings: 'lnum', 'tnum';
+      margin-left: -3rem;
+      position: absolute;
+      text-align: right;
+      width: 2em; }
+    ol li ul li:before {
+      content: ''; }
+    ol li ul li ol li {
+      counter-increment: alt-level; }
+      ol li ul li ol li:before {
+        content: counter(alt-level) "."; }
+    ol li ol li {
+      counter-increment: sub-level; }
+      ol li ol li:before {
+        content: counter(top-level) "." counter(sub-level); }
+      ol li ol li ul li:before {
+        content: ''; }
+      ol li ol li ol li {
+        counter-increment: sub-sub-level; }
+        ol li ol li ol li:before {
+          content: counter(top-level) "." counter(sub-level) "." counter(sub-sub-level); }
+
+dl {
+  line-height: 2rem;
+  margin-bottom: 1.43999rem;
+  padding-top: 0.56001rem; }
+  @media screen and (min-width: 40em) {
+    dl {
+      margin-bottom: 1.4007rem;
+      padding-top: 0.5993rem; } }
+  @media screen and (min-width: 50em) {
+    dl {
+      margin-bottom: 1.39599rem;
+      padding-top: 0.60401rem; } }
+  @media screen and (min-width: 64em) {
+    dl {
+      margin-bottom: 1.38823rem;
+      padding-top: 0.61177rem; } }
+  @media screen and (min-width: 100em) {
+    dl {
+      margin-bottom: 1.3821rem;
+      padding-top: 0.6179rem; } }
+  dl dt, dl dd {
+    font-feature-settings: 'kern', 'onum', 'liga';
+    margin-left: 2rem; }
+    @media screen and (min-width: 40em) {
+      dl dt, dl dd {
+        margin-left: 0; } }
+  dl dt {
+    font-weight: 700; }
+  dl dd + dt {
+    padding-top: 1rem; }
+
+table {
+  line-height: 2rem;
+  font-size: 1.19167rem;
+  margin-bottom: -0.60676rem;
+  padding-top: 0.60676rem;
+  font-family: "Gotham SSm A", "Gotham SSm B", "sans-serif";
+  font-feature-settings: 'liga', 'lnum', 'tnum', 'kern';
+  font-style: normal;
+  font-weight: 400;
+  width: 100%; }
+  @media screen and (min-width: 40em) {
+    table {
+      font-size: 1.09286rem;
+      margin-bottom: -0.63937rem;
+      padding-top: 0.63937rem; } }
+  @media screen and (min-width: 50em) {
+    table {
+      font-size: 1.08667rem;
+      margin-bottom: -0.64141rem;
+      padding-top: 0.64141rem; } }
+  @media screen and (min-width: 64em) {
+    table {
+      font-size: 0.99412rem;
+      margin-bottom: -0.67195rem;
+      padding-top: 0.67195rem; } }
+  @media screen and (min-width: 100em) {
+    table {
+      font-size: 0.92632rem;
+      margin-bottom: -0.69433rem;
+      padding-top: 0.69433rem; } }
+  table thead th {
+    line-height: 2rem;
+    font-size: 1.33333rem;
+    margin-bottom: -0.56001rem;
+    padding-top: 0.56001rem;
+    padding-bottom: 1px; }
+    @media screen and (min-width: 40em) {
+      table thead th {
+        font-size: 1.21429rem;
+        margin-bottom: -0.5993rem;
+        padding-top: 0.5993rem; } }
+    @media screen and (min-width: 50em) {
+      table thead th {
+        font-size: 1.2rem;
+        margin-bottom: -0.60401rem;
+        padding-top: 0.60401rem; } }
+    @media screen and (min-width: 64em) {
+      table thead th {
+        font-size: 1.17647rem;
+        margin-bottom: -0.61177rem;
+        padding-top: 0.61177rem; } }
+    @media screen and (min-width: 100em) {
+      table thead th {
+        font-size: 1.15789rem;
+        margin-bottom: -0.6179rem;
+        padding-top: 0.6179rem; } }
+
+b, strong, .bold {
+  font-weight: 700; }
+
+em, i, .italic {
+  font-style: italic; }
+
+small, .caption {
+  font-size: 1.06667rem;
+  font-family: "Gotham SSm A", "Gotham SSm B", "sans-serif";
+  font-style: normal;
+  font-weight: 400; }
+  @media screen and (min-width: 40em) {
+    small, .caption {
+      font-size: 0.97143rem; } }
+  @media screen and (min-width: 50em) {
+    small, .caption {
+      font-size: 0.96rem; } }
+  @media screen and (min-width: 64em) {
+    small, .caption {
+      font-size: 0.88235rem; } }
+  @media screen and (min-width: 100em) {
+    small, .caption {
+      font-size: 0.82105rem; } }
+
+small {
+  line-height: 1rem; }
+
+.caption {
+  line-height: 2rem;
+  margin-bottom: 1.35199rem;
+  padding-top: 0.64801rem;
+  color: #BDC8CC; }
+  @media screen and (min-width: 40em) {
+    .caption {
+      margin-bottom: 1.32056rem;
+      padding-top: 0.67944rem; } }
+  @media screen and (min-width: 50em) {
+    .caption {
+      margin-bottom: 1.31679rem;
+      padding-top: 0.68321rem; } }
+  @media screen and (min-width: 64em) {
+    .caption {
+      margin-bottom: 1.29117rem;
+      padding-top: 0.70883rem; } }
+  @media screen and (min-width: 100em) {
+    .caption {
+      margin-bottom: 1.27094rem;
+      padding-top: 0.72906rem; } }
+
+h1 + .caption, .alpha + .caption, h2 + .caption, .beta + .caption, h3 + .caption, .gamma + .caption {
+  margin-top: -1rem; }
+
+.delta + .caption, .epsilon + .caption, .zeta + .caption {
+  margin-top: 0rem; }
+
+blockquote p {
+  border-left: 0.15rem solid #0E58F5;
+  font-style: italic;
+  padding-left: 1rem;
+  margin-bottom: 1.87999rem;
+  padding-bottom: 0.56001rem; }
+  @media screen and (min-width: 40em) {
+    blockquote p {
+      margin-bottom: 1.80142rem;
+      padding-bottom: 0.5993rem; } }
+  @media screen and (min-width: 50em) {
+    blockquote p {
+      margin-bottom: 1.79199rem;
+      padding-bottom: 0.60401rem; } }
+  @media screen and (min-width: 64em) {
+    blockquote p {
+      margin-bottom: 1.77646rem;
+      padding-bottom: 0.61177rem; } }
+  @media screen and (min-width: 100em) {
+    blockquote p {
+      margin-bottom: 1.7642rem;
+      padding-bottom: 0.6179rem; } }
+
+@media screen and (min-width: 40em) {
+  blockquote {
+    margin-left: -1rem; } }
+
+hr {
+  background-image: linear-gradient(to bottom, transparent 50%, #BDC8CC 50%);
+  background-position: 0 50%;
+  background-repeat: repeat-x;
+  background-size: 100% 0.15rem;
+  border: 0;
+  margin: 0;
+  padding-bottom: 3rem;
+  padding-top: 3rem; }
+
+code, pre {
+  background-color: #F5F4F2;
+  font-family: "Operator SSm A", "Operator SSm B", "mono"; }
+
+pre {
+  display: block;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word; }
+
+code {
+  font-size: 1.06667rem;
+  line-height: 1rem; }
+  @media screen and (min-width: 40em) {
+    code {
+      font-size: 0.97143rem; } }
+  @media screen and (min-width: 50em) {
+    code {
+      font-size: 0.96rem; } }
+  @media screen and (min-width: 64em) {
+    code {
+      font-size: 0.88235rem; } }
+  @media screen and (min-width: 100em) {
+    code {
+      font-size: 0.82105rem; } }
+
+.upper {
+  font-kerning: normal;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase; }
+
+.small-caps {
+  font-feature-settings: 'smcp', 'kern';
+  font-kerning: normal;
+  letter-spacing: 0.1rem; }
+
+.lining-numerals {
+  font-feature-settings: 'lnum', 'kern'; }
+
+.oldstyle-numerals {
+  font-feature-settings: 'onum', 'kern'; }
+
+.section {
+  margin: 0 auto;
+  position: relative;
+  width: 94%; }
+  .section:before, .section:after {
+    display: table;
+    content: ""; }
+  .section:after {
+    clear: both; }
+  @media screen and (min-width: 64em) {
+    .section {
+      max-width: 64.70588rem; } }
+  @media screen and (min-width: 100em) {
+    .section {
+      max-width: 68.42105rem; } }
+
+.single-measure {
+  max-width: 41.66667rem;
+  margin: 0 auto; }
+  @media screen and (min-width: 40em) {
+    .single-measure {
+      max-width: 39.28571rem; } }
+  @media screen and (min-width: 50em) {
+    .single-measure {
+      max-width: 40rem; } }
+  @media screen and (min-width: 64em) {
+    .single-measure {
+      max-width: 40rem; } }
+  @media screen and (min-width: 100em) {
+    .single-measure {
+      max-width: 39.47368rem; } }
+
+.column {
+  max-width: 41.66667rem;
+  margin: 0 auto;
+  width: 100%; }
+  @media screen and (min-width: 40em) {
+    .column {
+      float: left;
+      margin: initial;
+      max-width: initial;
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  @media screen and (min-width: 64em) {
+    .column {
+      padding-left: 2rem;
+      padding-right: 2rem; } }
+
+@media screen and (min-width: 40em) {
+  .column--duo {
+    width: 50%; }
+    .column--duo:nth-of-type(2n+3) {
+      clear: left; }
+    .column--duo:nth-of-type(n+3) {
+      margin-top: 3rem; } }
+
+@media screen and (min-width: 40em) {
+  .column--trio {
+    width: 33.333%; }
+    .column--trio:nth-of-type(3n+4) {
+      clear: left; }
+    .column--trio:nth-of-type(n+4) {
+      margin-top: 3rem; } }
+
+@media screen and (min-width: 40em) {
+  .column--quad {
+    width: 50%; } }
+
+@media screen and (min-width: 50em) {
+  .column--quad {
+    width: 25%; } }
+
+@media screen and (min-width: 40em) {
+  .column--main {
+    max-width: 65%; } }
+
+@media screen and (min-width: 50em) {
+  .column--main {
+    max-width: 65%; } }
+
+@media screen and (min-width: 64em) {
+  .column--main {
+    max-width: 65%; } }
+
+@media screen and (min-width: 100em) {
+  .column--main {
+    max-width: 63.53846%; } }
+
+@media screen and (min-width: 40em) {
+  .column--sidebar {
+    max-width: 35%;
+    padding-right: 2rem; } }
+
+@media screen and (min-width: 50em) {
+  .column--sidebar {
+    max-width: 35%; } }
+
+@media screen and (min-width: 64em) {
+  .column--sidebar {
+    max-width: 35%;
+    padding-right: 4rem; } }
+
+@media screen and (min-width: 100em) {
+  .column--sidebar {
+    max-width: 36.46154%; } }
+
+@media screen and (min-width: 40em) {
+  .column--main + .column--sidebar {
+    padding-left: 2rem;
+    padding-right: 1rem; } }
+
+@media screen and (min-width: 64em) {
+  .column--main + .column--sidebar {
+    padding-left: 4rem;
+    padding-right: 2rem; } }
+
+@media screen and (min-width: 64em) {
+  .column--trio p,
+  .column--quad p,
+  .column--sidebar p {
+    line-height: 2rem;
+    font-size: 0.99412rem;
+    margin-bottom: 1.32805rem;
+    padding-top: 0.67195rem; }
+  .column--trio li,
+  .column--quad li,
+  .column--sidebar li {
+    font-size: 0.99412rem; } }
+
+@media screen and (min-width: 100em) {
+  .column--trio p,
+  .column--quad p,
+  .column--sidebar p {
+    line-height: 2rem;
+    font-size: 0.92632rem;
+    margin-bottom: 1.30567rem;
+    padding-top: 0.69433rem; }
+  .column--trio li,
+  .column--quad li,
+  .column--sidebar li {
+    font-size: 0.92632rem; } }
+
+@media screen and (min-width: 40em) {
+  .column--right {
+    max-width: 65%;
+    margin-left: 35%; } }
+
+@media screen and (min-width: 50em) {
+  .column--right {
+    max-width: 65%;
+    margin-left: 35%; } }
+
+@media screen and (min-width: 64em) {
+  .column--right {
+    max-width: 65%;
+    margin-left: 35%; } }
+
+@media screen and (min-width: 100em) {
+  .column--right {
+    max-width: 63.53846%;
+    margin-left: 36.46154%; } }
+
+@media screen and (min-width: 40em) {
+  .column--right .sidenote {
+    max-width: 35%;
+    left: 0;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    position: absolute; } }
+
+@media screen and (min-width: 50em) {
+  .column--right .sidenote {
+    max-width: 35%; } }
+
+@media screen and (min-width: 64em) {
+  .column--right .sidenote {
+    max-width: 35%;
+    padding-right: 4rem; } }
+
+@media screen and (min-width: 100em) {
+  .column--right .sidenote {
+    max-width: 36.46154%;
+    padding-left: 2rem; } }
+
+@media screen and (min-width: 40em) {
+  .column--left {
+    max-width: 65%; } }
+
+@media screen and (min-width: 50em) {
+  .column--left {
+    max-width: 65%; } }
+
+@media screen and (min-width: 64em) {
+  .column--left {
+    max-width: 65%; } }
+
+@media screen and (min-width: 100em) {
+  .column--left {
+    max-width: 63.53846%; } }
+
+@media screen and (min-width: 40em) {
+  .column--left .sidenote {
+    max-width: 35%;
+    left: 65%;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    position: absolute; } }
+
+@media screen and (min-width: 50em) {
+  .column--left .sidenote {
+    max-width: 35%;
+    left: 65%; } }
+
+@media screen and (min-width: 64em) {
+  .column--left .sidenote {
+    max-width: 35%;
+    left: 65%;
+    padding-left: 4rem; } }
+
+@media screen and (min-width: 100em) {
+  .column--left .sidenote {
+    max-width: 36.46154%;
+    left: 63.53846%;
+    padding-right: 2rem; } }
+
+.navbar {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background: #F1D355;
+  border-bottom: 1px solid #edc726; }
+
+.navbar-logo {
+  max-width: 100px;
+  max-height: 100px;
+  width: 50px; }
+  @media screen and (min-width: 40em) {
+    .navbar-logo {
+      width: 60px; } }
+  @media screen and (min-width: 50em) {
+    .navbar-logo {
+      width: 70px; } }
+  @media screen and (min-width: 64em) {
+    .navbar-logo {
+      width: 80px; } }
+  @media screen and (min-width: 100em) {
+    .navbar-logo {
+      width: 100px; } }
+
+.navbar-title {
+  font-family: "Gotham SSm A", "Gotham SSm B", "sans-serif";
+  font-weight: 700;
+  padding-top: 0;
+  color: #000; }
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none; }
+  .navbar ul li {
+    margin-left: 2rem; }
+  .navbar ul li:first-child {
+    margin-left: 0; }
+  .navbar ul a {
+    text-shadow: none;
+    background-image: none;
+    color: #000;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px; }
+    .navbar ul a:hover {
+      border-bottom: 2px solid black; }

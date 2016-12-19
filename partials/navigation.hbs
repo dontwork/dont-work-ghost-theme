@@ -1,6 +1,11 @@
-<div class="nav">
-{{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-{{@blog.title}}
+<div class="navbar">
+    <a href="{{@blog.url}}" class="navbar-logo" >
+        <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+    </a>
+    <a href="{{@blog.url}}" class="navbar-title gamma">
+        {{@blog.title}}
+    </a>
+
     <ul>
         {{#foreach navigation}}
             <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
