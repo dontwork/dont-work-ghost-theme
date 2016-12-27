@@ -71,7 +71,7 @@ body {
       font-size: 1.15789rem; } }
 
 a {
-  color: #0E58F5;
+  color: #4077FF;
   text-decoration: none;
   transition: color .1s, background-color .1s; }
   a:hover, a:active, a:focus {
@@ -79,7 +79,7 @@ a {
     text-decoration: none; }
 
 p a, li a {
-  background-image: linear-gradient(to bottom, transparent 50%, #709cf9 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #4077FF 50%);
   background-position: 0 93%;
   background-repeat: repeat-x;
   background-size: 100% 0.15rem;
@@ -475,7 +475,7 @@ h1 + .caption, .alpha + .caption, h2 + .caption, .beta + .caption, h3 + .caption
   margin-top: 0rem; }
 
 blockquote p {
-  border-left: 0.15rem solid #0E58F5;
+  border-left: 0.5rem solid #4077FF;
   font-style: italic;
   padding-left: 1rem;
   margin-bottom: 1.87999rem;
@@ -525,20 +525,20 @@ pre {
   word-wrap: break-word; }
 
 code {
-  font-size: 1.06667rem;
-  line-height: 1rem; }
+  font-size: 1.19167rem;
+  line-height: 1.4rem; }
   @media screen and (min-width: 40em) {
     code {
-      font-size: 0.97143rem; } }
+      font-size: 1.09286rem; } }
   @media screen and (min-width: 50em) {
     code {
-      font-size: 0.96rem; } }
+      font-size: 1.08667rem; } }
   @media screen and (min-width: 64em) {
     code {
-      font-size: 0.88235rem; } }
+      font-size: 0.99412rem; } }
   @media screen and (min-width: 100em) {
     code {
-      font-size: 0.82105rem; } }
+      font-size: 0.92632rem; } }
 
 .upper {
   font-kerning: normal;
@@ -781,13 +781,78 @@ code {
     left: 63.53846%;
     padding-right: 2rem; } }
 
+/* Tomorrow Night Eighties Theme */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #999999; }
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #f2777a; }
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #f99157; }
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+  color: #ffcc66; }
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #99cc99; }
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+  color: #6699cc; }
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #cc99cc; }
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #2d2d2d;
+  color: #cccccc;
+  padding: 1em; }
+
+.hljs-emphasis {
+  font-style: italic; }
+
+.hljs-strong {
+  font-weight: bold; }
+
+pre {
+  padding: 0; }
+
 .navbar {
   justify-content: center;
   align-items: center;
   display: flex;
-  flex-direction: column;
-  background: #F1D355;
-  border-bottom: 1px solid #edc726; }
+  flex-direction: column; }
 
 .navbar-logo {
   max-width: 100px;
@@ -829,3 +894,65 @@ code {
     padding-bottom: 3px; }
     .navbar ul a:hover {
       border-bottom: 2px solid black; }
+
+.post {
+  margin: auto;
+  padding: 10px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed lightgrey; }
+  @media screen and (min-width: 40em) {
+    .post {
+      padding: 15px 0;
+      padding-bottom: 25px;
+      max-width: 90%; } }
+  @media screen and (min-width: 50em) {
+    .post {
+      padding: 20px 0;
+      padding-bottom: 30px;
+      max-width: 70%;
+      border-bottom-width: 2px; } }
+  @media screen and (min-width: 64em) {
+    .post {
+      padding: 25px 0;
+      padding-bottom: 35px;
+      max-width: 60%;
+      border-bottom-width: 3px; } }
+  @media screen and (min-width: 100em) {
+    .post {
+      padding: 30px 0;
+      padding-bottom: 40px;
+      max-width: 710px;
+      border-bottom-width: 4px; } }
+  .post .read-more {
+    background-image: none; }
+  .post .post-meta {
+    font-size: 0.9rem; }
+  .post img {
+    max-width: 100%; }
+
+.post-footer {
+  font-size: 1rem;
+  clear: both; }
+  .post-footer .author {
+    float: left; }
+  .post-footer .share {
+    float: right; }
+  .post-footer .clear {
+    clear: both; }
+
+.post-template .post {
+  border: 0; }
+
+.pagination {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+footer.site-footer {
+  font-size: 1rem;
+  padding: 30px 0;
+  background-color: #ECECEC; }
+  footer.site-footer .copyright {
+    float: left; }
+  footer.site-footer .poweredby {
+    float: right; }
